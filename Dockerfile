@@ -1,4 +1,4 @@
-FROM abcsy/minio-server:latest
+FROM abcsy/minio:latest
 # MAINTAINER Thibault NORMAND <me@zenithar.org>
 
 # ADD https://dl.minio.io/server/minio/release/linux-amd64/minio /usr/bin/minio
@@ -12,6 +12,6 @@ FROM abcsy/minio-server:latest
 #     && adduser -s /bin/false -G minio -S -D minio
 
 VOLUME      ["/data"]
-EXPOSE      9090
+EXPOSE      9090 9001
 ENTRYPOINT  ["/entrypoint.sh"]
 CMD         ["server","/data"]
