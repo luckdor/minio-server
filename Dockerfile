@@ -1,4 +1,4 @@
-FROM abcsy/minio:latest
+FROM abcsy/minio-server:latest
 # MAINTAINER Thibault NORMAND <me@zenithar.org>
 
 # ADD https://dl.minio.io/server/minio/release/linux-amd64/minio /usr/bin/minio
