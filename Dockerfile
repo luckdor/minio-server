@@ -14,4 +14,4 @@ FROM abcsy/minio:latest
 ENTRYPOINT  ["/entrypoint.sh"]
 VOLUME      ["/data"]
 EXPOSE      9090
-CMD         ["server","/data"]
+# CMD         ["server","/data"]
