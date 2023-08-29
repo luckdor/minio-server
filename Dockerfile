@@ -11,8 +11,6 @@ FROM abcsy/minio-server:latest
 #     && addgroup minio \
 #     && adduser -s /bin/false -G minio -S -D minio
 
-Run mc admin update
-
 VOLUME      ["/data"]
 EXPOSE      9090
 ENTRYPOINT  ["/entrypoint.sh"]
