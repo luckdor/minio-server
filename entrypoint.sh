@@ -1,4 +1,4 @@
 #! /bin/sh
 # chown -R minio:minio /data
 # /usr/bin/gosu minio /usr/bin/minio $@
-# mc admin update
+mc update
