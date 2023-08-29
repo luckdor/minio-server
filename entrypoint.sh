@@ -4,3 +4,5 @@
 minio server /data --console-address :9090 --address :9001
 
 service minio restart
+
+server /data
