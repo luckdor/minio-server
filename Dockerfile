@@ -13,5 +13,5 @@ FROM abcsy/minio:latest
 
 # VOLUME      ["/data"]
 EXPOSE      9090 9001 9000
-ENTRYPOINT  ["/entrypoint.sh"]
+# ENTRYPOINT  ["/entrypoint.sh"]
 # CMD         ["server","/data"]
