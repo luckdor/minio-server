@@ -11,7 +11,9 @@ FROM abcsy/minio:latest
 #     && addgroup minio \
 #     && adduser -s /bin/false -G minio -S -D minio
 
+RUN minio server /data --console-address :9090 --address :9001
 # VOLUME      ["/data"]
 EXPOSE      9090 9001 9000
 # ENTRYPOINT  ["/entrypoint.sh"]
-CMD         ["server","/data","--console-address:9090","--address:9001"]
+
+CMD         ["server","/data"]
