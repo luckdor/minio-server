@@ -11,7 +11,7 @@ FROM abcsy/minio:latest
 #     && addgroup minio \
 #     && adduser -s /bin/false -G minio -S -D minio
 
-VOLUME      ["/data"]
+# VOLUME      ["/data"]
 EXPOSE      9090 9001 9000
 ENTRYPOINT  ["/entrypoint.sh"]
-CMD         ["server","/data"]
+# CMD         ["server","/data"]
