@@ -1,18 +1,14 @@
-FROM abcsy/minio:latest
+FROM ubuntu:latest
 # MAINTAINER Thibault NORMAND <me@zenithar.org>
 
-# ADD https://dl.minio.io/server/minio/release/linux-amd64/minio /usr/bin/minio
-# ADD https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64 /usr/bin/gosu
-# ADD entrypoint.sh .
+RUN curl -fsSL https://test.docker.com -o test-docker.sh
 
-# RUN chmod +x /usr/bin/minio \
-#     && chmod +x /usr/bin/gosu \
-#     && chmod +x /entrypoint.sh \
-#     && addgroup minio \
-#     && adduser -s /bin/false -G minio -S -D minio
+WORKDIR root
+COPY docker-compose.yaml .
+COPY nginx.conf .
 
-# RUN minio server /data --console-address :9090 --address :9001
-# VOLUME      ["/data"]
+RUN docker compose up -d
+
 EXPOSE 9090 9001 9000
 # ENTRYPOINT  ["/entrypoint.sh"]
 
