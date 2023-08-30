@@ -1,7 +1,11 @@
 FROM ubuntu:latest
 # MAINTAINER Thibault NORMAND <me@zenithar.org>
 
-RUN curl -fsSL https://test.docker.com -o test-docker.sh
+RUN apt-get update && apt-get install -y wget
+RUN wget -qO- get.docker.com | bash
+
+RUN apt install systemd
+RUN systemctl enable docker
 
 WORKDIR root
 COPY docker-compose.yaml .
