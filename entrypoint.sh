@@ -3,6 +3,8 @@
 # /usr/bin/gosu minio /usr/bin/minio $@
 # minio server /data --console-address :9090 --address :9001
 
-service minio restart
+docker-compose up -d
 
-server /data
+# service minio restart
+
+# server /data
