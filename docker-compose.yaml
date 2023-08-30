@@ -1,8 +1,5 @@
 version: '3.7'
 
-services:
-  web:
-    image: abcsy/minio-server:latest
 # Settings and configurations that are common for all containers
 x-minio-common: &minio-common
   image: quay.io/minio/minio:RELEASE.2023-08-29T23-07-35Z
