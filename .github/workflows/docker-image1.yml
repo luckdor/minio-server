@@ -15,5 +15,5 @@ jobs:
         echo "${{ secrets.DOCKERPW }}" | docker login -u "abcsy" -p "Syw!888888"
         # docker image build -t dab8106/pyflask:latest .
         # docker push dab8106/pyflask:latest
-        docker compose up -d
-        docker compose push
+        docker-compose up -d
+        docker-compose push
