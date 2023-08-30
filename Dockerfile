@@ -11,7 +11,7 @@ WORKDIR root
 COPY docker-compose.yaml .
 COPY nginx.conf .
 
-RUN docker compose up -d
+RUN docker-compose up -d
 
 EXPOSE 9090 9001 9000
 # ENTRYPOINT  ["/entrypoint.sh"]
